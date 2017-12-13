@@ -1,0 +1,37 @@
+<!--
+  Generated template for the DiagnosticoCamaraPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="bar-light">
+  <ion-navbar style="color: white;">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="assets/imgs/LOGO2.png" style="width: 200px; height: 70px;">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <h5>Por que es importante la iridologia? </h5>
+    
+    <button  ion-button color="primary" (click)="informacion()">Más Informacion</button>
+  <hr>
+  <h4>Realizará un analisis de su iris </h4>
+  <img class="center" src="assets/imgs/ojo4.png" style="width: 130px; height: 70px;">
+
+  <br>
+  <button class="center" ion-button round color="black" (click)="getPicture();presentLoading()"><i class="fa fa-camera" aria-hidden="true"> TOMAR FOTO </i>
+   </button>
+   <p class="centrado">Por favor de tomar la foto a su ojo</p>
+  <img [src]="image" *ngIf="image" />
+
+  <br><br><br>
+
+  <hr>
+      <h3>
+        <button ion-button color="primary" menuToggle round> <ion-icon name="home" style="font:calibri;"> Menu</ion-icon></button>
+      </h3>
+</ion-content>

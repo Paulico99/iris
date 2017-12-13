@@ -1,0 +1,28 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar> 
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+        <!--
+        <button ion-item (click)="openPage()"><ion-icon name="eye"></ion-icon>
+            See Eyes
+          </button>
+        -->
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<hr>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
